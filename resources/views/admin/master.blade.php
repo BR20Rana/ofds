@@ -5,6 +5,16 @@
 @include('admin.partial.header')
 
 <body id="page-top">
+<style>
+        body {
+            background-image: url('/frontend/images/logo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 
     <!-- Page Wrapper -->
 
@@ -49,16 +59,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/shop')}}">
                 <i class="fa-solid fa-cart-shopping"></i>
-                    <span>Shop</span>
+                    <span> Shop </span>
                 </a>
             </li>
             
-            <li class="nav-item">
-                <a class="nav-link" href="{{url('order/list')}}">
-                <i class="fa-solid fa-cart-plus"></i>
-                    <span> Order </span>
-                </a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="{{('/delivery/list')}}">
                 <i class="fa-solid fa-truck-ramp-box"></i>
@@ -71,6 +76,7 @@
                     <span> Payment </span>
                 </a>
             </li>
+          
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -85,15 +91,6 @@
             <!-- Heading -->
             
 
-            <!-- Nav Item - Pages Collapse Menu -->
-           
-
-            <!-- Nav Item - Charts -->
-            
-            <!-- Nav Item - Tables -->
-            
-
-            <!-- Divider -->
       
 
             
@@ -164,23 +161,7 @@
                                 <!-- Counter - Alerts -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
+                            
                                 
                                 
 
@@ -204,11 +185,7 @@
                                             alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
+                                   
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
@@ -216,11 +193,7 @@
                                             alt="...">
                                         <div class="status-indicator"></div>
                                     </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
+                                   
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
@@ -228,11 +201,7 @@
                                             alt="...">
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
+                                   
                                 </a>
                                 
 
@@ -249,7 +218,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <!-- <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -260,9 +229,9 @@
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
-                                </a>
+                                </a> -->
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="{{route('admin.logout')}}">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -296,13 +265,13 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true"> </span>
                     </button>
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="">Logout</a>
                 </div>
             </div>
           

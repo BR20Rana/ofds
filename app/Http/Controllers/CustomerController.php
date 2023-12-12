@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\User;
 
 class CustomerController extends Controller
 {
     public function list()
     {   
-        $customerdata=Customer::all();
+        $customerdata=User::all();
+        // dd($customerdata);
         return view ('admin.pages.customer.list', compact('customerdata'));
     }
     public function addcustomer()

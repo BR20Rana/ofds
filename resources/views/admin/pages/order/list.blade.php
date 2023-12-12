@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 <h1> Order Food </h1>
-<a class="btn btn-success" herf="{{route('orderlist')}}"> Add Order </a>
+<a class="btn btn-success" herf="{{route('oderlist')}}"> Add Order </a>
 
 <section class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">

@@ -14,18 +14,14 @@
       <th scope="col">#</th>
       <th scope="col">Customer Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Address</th>
-      <th scope="col">Phone Number</th>
     </tr>
   </thead>
   <tbody>
     @foreach($customerdata as $item)
     <tr>
       <th scope="row">{{$item->id}}</th>
-      <td>{{$item->customer_name}}</td>
-      <td>{{$item->customer_email}}</td>
-      <td>{{$item->address}}</td>
-      <td>{{$item->phone}}</td>
+      <td>{{$item->name}}</td>
+      <td>{{$item->email}}</td>
     </tr>
     @endforeach
   </tbody>
